@@ -1,4 +1,6 @@
-## DominantColor
+## DominantColorX
+
+Fork of [https://github.com/edwellbrook/DominantColor](https://github.com/edwellbrook/DominantColor)
 
 Finding the dominant colors of an image using the CIE LAB color space and the k-means clustering algorithm.
 
@@ -24,7 +26,7 @@ Pixels are grouped into clusters of dominant colors using a standard k-means clu
 
 ##### Choosing K
 
-The k-value was originally chosen based on the rule of thumb `k = sqrt(n/2)`<sup>[[14](http://en.wikipedia.org/wiki/Determining_the_number_of_clusters_in_a_data_set#cite_note-1)]</sup> but this resulted in `k`-values that were too large to run in a reasonable amount of time for large values of `n`. Right now, I'm using a magic value of `16` because empirical testing showed that it yielded the best results for many different images but I'm still looking into a number of more data-driven alternate approaches.
+This version of module contains input value of **k** as parameters. If not passed, then k is detected automatically: the k-value was originally chosen based on the rule of thumb `k = sqrt(n/2)`<sup>[[14](http://en.wikipedia.org/wiki/Determining_the_number_of_clusters_in_a_data_set#cite_note-1)]</sup> but this resulted in `k`-values that were too large to run in a reasonable amount of time for large values of `n`. Right now, I'm using a magic value of `16` because empirical testing showed that it yielded the best results for many different images but I'm still looking into a number of more data-driven alternate approaches.
 
 ##### Selecting Initial Centroids
 
